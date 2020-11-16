@@ -42,7 +42,7 @@ redis-cli monitor
 ```
 # 3. Скачать репозиторий 
 ```bash
-git clone git@github.com:mebius01/django_server_HaloLab.git
+git clone git@github.com:mebius01/node-server-HaloLab.git
 ```
 # 4. Установить необходимые зависимости
 ```bash
