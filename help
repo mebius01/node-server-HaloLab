@@ -1,5 +1,18 @@
-Django’s cache framework https://docs.djangoproject.com/en/3.1/topics/cache/
+Model:
+Model Instances https://sequelize.org/master/manual/model-instances.html
+Sequelize-Auto https://github.com/sequelize/sequelize-auto
 
-Кэширование данных https://ruhighload.com/%D0%9A%D1%8D%D1%88%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5+%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D1%85
+Pagination:
+Server side Pagination in Node.js with Sequelize & MySQL https://bezkoder.com/node-js-sequelize-pagination-mysql/
+https://github.com/expressjs/express-paginate
 
-Сериализация django-mptt также возвращает дочерние узлы вне родительского узла. https://issue.life/questions/53533219
+https://learn.javascript.ru/closure#vlozhennye-funktsii !!
+
+Color in console.log()
+https://stackoverflow.com/questions/9781218/how-to-change-node-jss-console-font-color
+
+Лучшие практические методы для рабочей среды: производительность и надежность
+https://expressjs.com/ru/advanced/best-practice-performance.html
+
+Полный список методов ответа Node.js / Express и когда они должны быть вызваны:
+https://stackoverflow.com/questions/7042340/error-cant-set-headers-after-they-are-sent-to-the-client
