@@ -1,12 +1,14 @@
 const path = require('path')
 const express = require('express');
-const sequelize = require('./api/postgresql')
+const paginate = require('express-paginate');
+const sequelize = require('./api/postgresql');
 const routes = require('./api/routes');
 
 
 const app = express();
 const PORT = process.env.PORT || 3000;
 
+app.use(paginate.middleware(10, 50));
 
 app.use(express.static(path.join(__dirname, 'public')));
 
