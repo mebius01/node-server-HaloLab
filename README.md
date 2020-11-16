@@ -46,6 +46,7 @@ git clone git@github.com:mebius01/node-server-HaloLab.git
 ```
 # 4. Установить необходимые зависимости
 ```bash
+cd node-server-HaloLab/
 npm install
 ```
 # 5. Test App
