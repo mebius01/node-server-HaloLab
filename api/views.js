@@ -3,8 +3,8 @@ const timeRequest = require('./timeRequest');
 const { Log } = require('./models');
 
 
-const ttlLocal = 3;
-const ttlRedis = 5;
+const ttlLocal = 15;
+const ttlRedis = 30;
 let queryRedis = {fake:'fake'};
 let queryLocal = {fake:'fake'};
 

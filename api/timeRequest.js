@@ -41,7 +41,6 @@ async function timeRequest(cacheName, reqStart, requestName) {
       timeRedis: 0,
       timeNode: 0,
     });
-    log.reload();
     console.log(`${data.requestName} - Saved`.blue);
   }
   
@@ -53,7 +52,6 @@ async function timeRequest(cacheName, reqStart, requestName) {
     const checking = Object.keys(checkingCacheName(data.cacheName, data.timeQuery))[0]
     log[checking] = data.timeQuery
     await log.save();
-    log.reload();
     console.log(`${data.requestName} - Updated`.blue);
   };
 };
