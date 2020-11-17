@@ -1,6 +1,6 @@
 const path = require('path');
 const fs = require('fs');
-const Category = require('../models/category')
+const { Category } = require('../api/models')
 
 const file = path.join(__dirname, 'fixtures', 'Category.json')
 

@@ -1,5 +1,6 @@
 const client = require('./redis');
 const timeRequest = require('./timeRequest');
+const { Log } = require('./models');
 
 
 const ttlLocal = 3;
@@ -25,7 +26,9 @@ function getOneData(obj) {
       if (originalUrl === Object.keys(queryLocal)[0]) {  // Если ключ есть в queryLocal то работает это блок
         const object = queryLocal[originalUrl]
         res.status(200).json(object);                    // Ответ в формате JSON
-        timeRequest('LOCAL', req_start);                 // Функция считает время работы блока
+        console.log(
+          timeRequest('Node', req_start, originalUrl)
+        )                                                // Функция считает время работы блока
       }
 
       else {
@@ -33,14 +36,18 @@ function getOneData(obj) {
           client.get(originalUrl, (err, object) => {      // Получить значение по ключу в Redis
             if (err) console.log(err.message)             // Выкинуть ошибку Redis в консоль
             res.status(200).json(JSON.parse(object));     // Ответ в формате JSON
-            timeRequest('REDIS', req_start);              // Функция считает время работы блока
+            console.log(
+              timeRequest('Redis', req_start, originalUrl)
+            )                                             // Функция считает время работы блока
           })
         }
 
         else {
           const object = await obj.findByPk(+pk);         // Если queryLocal & queryRedis пусты работает этот блок
           res.status(200).json(object);                   // Ответ в формате JSON
-          timeRequest('PostgreSQL', req_start);           // Функция считает время работы блока
+          console.log(
+            timeRequest('DB', req_start, originalUrl)
+          )                                               // Функция считает время работы блока
 
           setTimeout(() => {                              // Сброс queryRedis, Redis 
             client.del(originalUrl, (err, reply) => {

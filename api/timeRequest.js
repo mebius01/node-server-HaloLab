@@ -1,7 +1,13 @@
-function timeRequest(str, reqStart) {
-    const query_bd = new Date() - reqStart
-    console.log('\x1b[36m%s\x1b[0m', `Request fom ${str}: ${query_bd}, ms`);
-    return query_bd
+function timeRequest(cacheName, reqStart, requestName) {
+  const timeQuery = new Date() - reqStart
+
+    const data = {
+      requestName,
+      cacheName,
+      timeQuery
+    }
+
+    return data
 }
 
 module.exports = timeRequest

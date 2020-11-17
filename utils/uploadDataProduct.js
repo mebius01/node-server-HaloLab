@@ -1,9 +1,9 @@
 const path = require('path');
 const fs = require('fs');
-const Product = require('../models/product');
+const {Product} = require('../api/models');
 
 
-const file = path.join(__dirname, 'fixtures', 'Product4.json')
+const file = path.join(__dirname, 'fixtures', 'Product.json')
 const rawData = fs.readFileSync(file)
 const jsonData = JSON.parse(rawData)
 let counter = 0
@@ -20,8 +20,6 @@ jsonData.forEach(async element => {
       price: fields.price,
       stock: fields.stock,
       available: fields.available,
-      created: fields.created,
-      updated: fields.updated,
       category_id: fields.category,
     });
     const inst = product instanceof Product

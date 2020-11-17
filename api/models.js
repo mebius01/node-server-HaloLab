@@ -86,14 +86,6 @@ const Product = postgresql.define('product', {
     type: Sequelize.BOOLEAN,
     allowNull: false
   },
-  created: {
-    type: Sequelize.DATE,
-    allowNull: false
-  },
-  updated: {
-    type: Sequelize.DATE,
-    allowNull: false
-  },
   category_id: {
     type: Sequelize.INTEGER,
     allowNull: false,
@@ -104,4 +96,30 @@ const Product = postgresql.define('product', {
   }
 });
 
-module.exports = {Category, Product};
+const Log = postgresql.define('log', {
+  id: {
+    autoIncrement: true,
+    type: Sequelize.INTEGER,
+    allowNull: false,
+    primaryKey: true
+  },
+  Request: {
+    type: Sequelize.STRING,
+    allowNull: false
+  },
+  timeDB: {
+    type: Sequelize.INTEGER,
+    allowNull: false
+  },
+  timeRedis: {
+    type: Sequelize.INTEGER,
+    allowNull: false
+  },
+  timeNode: {
+    type: Sequelize.INTEGER,
+    allowNull: false
+  },
+  
+});
+
+module.exports = {Category, Product, Log};
