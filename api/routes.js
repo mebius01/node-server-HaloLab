@@ -1,7 +1,7 @@
 const { Router } = require('express');
 const router = Router();
 const {Category, Product, Log} = require('./models');
-const {getAllData, getOneData} = require('./views')
+const { getAllData, getOneData } = require('./views');
 
 router.get('/category', getAllData(Category));
 

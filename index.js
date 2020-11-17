@@ -1,4 +1,4 @@
-const path = require('path')
+const path = require('path');
 const express = require('express');
 const paginate = require('express-paginate');
 const sequelize = require('./api/postgresql');
@@ -28,6 +28,4 @@ async function start() {
   }
 }
 
-start()
-
-
+start();

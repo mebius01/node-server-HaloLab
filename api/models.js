@@ -119,7 +119,6 @@ const Log = postgresql.define('log', {
     type: Sequelize.INTEGER,
     allowNull: false
   },
-  
 });
 
 module.exports = {Category, Product, Log};

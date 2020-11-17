@@ -1,13 +1,13 @@
 function timeRequest(cacheName, reqStart, requestName) {
-  const timeQuery = new Date() - reqStart
+  const timeQuery = new Date() - reqStart;
 
-    const data = {
-      requestName,
-      cacheName,
-      timeQuery
-    }
+  const data = {
+    requestName,
+    cacheName,
+    timeQuery
+  };
 
-    return data
+  return data;
 }
 
-module.exports = timeRequest
+module.exports = timeRequest;
