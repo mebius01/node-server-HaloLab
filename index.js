@@ -3,10 +3,11 @@ const express = require('express');
 const paginate = require('express-paginate');
 const sequelize = require('./api/postgresql');
 const routes = require('./api/routes');
-
+require('colors')
 
 const app = express();
 const PORT = process.env.PORT || 3000;
+
 
 app.use(paginate.middleware(10, 50));
 

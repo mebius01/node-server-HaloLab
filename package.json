@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/mebius01/node-server-HaloLab#readme",
   "dependencies": {
+    "colors": "^1.4.0",
     "express": "^4.17.1",
     "express-paginate": "^1.0.2",
     "pg": "^8.5.1",

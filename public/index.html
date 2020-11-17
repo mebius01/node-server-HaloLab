@@ -3,27 +3,26 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/index.css" />
     <title>Test Node-Server with cache</title>
   </head>
   <body>
     <h1>Test Page</h1>
     <div class="container">
-        <ul>
+      <ul>
         <li><a href="api/category">Category List</a></li>
-        <li><a href="api/product?page=1&limit=24">Product List (?page=1&limit=24)</a></li>
+        <li>
+          <a href="api/product?page=1&limit=24"
+            >Product List (?page=1&limit=24)</a
+          >
+        </li>
         <hr />
         <li>
-          <a
-            href="api/product/16"
-            >Product Detail..</a
-          >
+          <a href="api/product/16">Product Detail..</a>
         </li>
         <li><a href="api/category/44">Category Detail..</a></li>
         <li>
-          <a href="api/category/kartridzhi-lazernye-cw"
-            >Category Detail.. Detail..</a
-          >
+          <a href="/api/log">Log Response Time Log</a>
         </li>
       </ul>
     </div>
