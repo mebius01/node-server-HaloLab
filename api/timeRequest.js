@@ -35,7 +35,7 @@ async function timeRequest(cacheName, reqStart, requestName) {
   **/ 
   if (log === null) {
     console.log(`${data.requestName} - Not found`.red);
-    const log = Log.create({
+    Log.create({
       Request: data.requestName,
       timeDB: data.timeQuery,
       timeRedis: 0,
