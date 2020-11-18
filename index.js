@@ -9,13 +9,13 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 
-app.use(paginate.middleware(10, 50));
+app.use(paginate.middleware(80, 50));
 
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/api/', routes);
 
-app.use((req, res) => {
+app.get((req, res) => {
     res.sendFile('/index.html');
 });
 

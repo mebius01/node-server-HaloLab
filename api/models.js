@@ -106,18 +106,21 @@ const Log = postgresql.define('log', {
   Request: {
     type: Sequelize.STRING,
     allowNull: false,
-    unique: true
+    // unique: true
   },
   timeDB: {
     type: Sequelize.INTEGER,
+    defaultValue: 0,
     allowNull: false
   },
   timeRedis: {
     type: Sequelize.INTEGER,
+    defaultValue: 0,
     allowNull: false
   },
   timeNode: {
     type: Sequelize.INTEGER,
+    defaultValue: 0,
     allowNull: false
   },
 });
